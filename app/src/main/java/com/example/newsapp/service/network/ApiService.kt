@@ -10,7 +10,8 @@ interface ApiService {
 
     @GET("everything")
     fun getArticles(@Query("apiKey") key : String,
-                    @Query("source") source: String) : Flowable<ResponseArticles>
+                    @Query("source") source: String?,
+                    @Query("q") q :String) : Flowable<ResponseArticles>
 
     @GET("sources")
     fun getSource(@Query("apiKey") key : String,

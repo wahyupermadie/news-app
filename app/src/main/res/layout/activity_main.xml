@@ -16,8 +16,8 @@
                     android:layout_height="?attr/actionBarSize"
                     android:background="?attr/colorPrimary"
                     app:layout_scrollFlags="scroll|enterAlways"
-                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-                    app:theme="@style/ThemeOverlay.AppCompat.Light" />
+                    app:popupTheme="@style/AppTheme"
+                    app:theme="@style/AppTheme" />
     </com.google.android.material.appbar.AppBarLayout>
     <androidx.core.widget.NestedScrollView
             android:fillViewport="true"

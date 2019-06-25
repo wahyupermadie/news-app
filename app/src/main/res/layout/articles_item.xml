@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable name="articles" type="com.example.newsapp.service.network.model.articles.ArticlesItem"/>
+    </data>
+    <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <com.google.android.material.card.MaterialCardView
+                app:cardElevation="5dp"
+                app:cardUseCompatPadding="true"
+                app:cardCornerRadius="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <androidx.appcompat.widget.AppCompatImageView
+                        app:srcImage="@{articles.urlToImage}"
+                        android:scaleType="centerCrop"
+                        android:id="@+id/iv_image_article"
+                        android:src="@color/colorAccent"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"/>
+                <androidx.appcompat.widget.LinearLayoutCompat
+                        android:orientation="vertical"
+                        android:padding="10dp"
+                        android:background="@drawable/gradient_background"
+                        android:layout_gravity="bottom"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp">
+                    <androidx.appcompat.widget.AppCompatTextView
+                            android:textColor="@color/colorFont"
+                            android:text="@{articles.title}"
+                            android:maxLines="1"
+                            android:ellipsize="end"
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:id="@+id/tv_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    <androidx.appcompat.widget.AppCompatTextView
+                            android:textColor="@color/colorFont"
+                            android:text="@{articles.author}"
+                            android:maxLines="1"
+                            android:ellipsize="end"
+                            android:textSize="16sp"
+                            android:id="@+id/tv_author"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                    <androidx.appcompat.widget.AppCompatTextView
+                            android:textColor="@color/colorFont"
+                            android:text="@{articles.description}"
+                            android:maxLines="1"
+                            android:ellipsize="end"
+                            android:id="@+id/tv_desc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </FrameLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</layout>
